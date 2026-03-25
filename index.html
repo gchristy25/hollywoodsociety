@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HollywoodSociety - Inside the Entertainment Industry</title>
+    <meta name="description" content="Industry insights, distribution knowledge, and career resources for film professionals. HollywoodSociety is your authority source for entertainment industry news and education.">
+    <meta property="og:title" content="HollywoodSociety - Inside the Entertainment Industry">
+    <meta property="og:description" content="Industry insights, distribution knowledge, and career resources for film professionals.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hollywoodsociety.com/">
+    <link rel="canonical" href="https://hollywoodsociety.com/">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; }
+        a { color: #d4a017; text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #f0c040; }
+
+        /* Nav */
+        nav { background: #111; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid #d4a017; position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #fff; letter-spacing: 0.5px; }
+        .logo span { color: #d4a017; }
+        .nav-links { display: flex; gap: 28px; }
+        .nav-links a { color: #ccc; font-size: 0.95rem; font-weight: 500; }
+        .nav-links a:hover { color: #d4a017; }
+
+        /* Hero */
+        .hero { text-align: center; padding: 100px 20px 80px; background: linear-gradient(180deg, #111 0%, #0a0a0a 100%); }
+        .hero h1 { font-size: 3rem; color: #fff; margin-bottom: 18px; }
+        .hero h1 span { color: #d4a017; }
+        .hero p { font-size: 1.2rem; color: #aaa; max-width: 640px; margin: 0 auto 36px; }
+        .btn-cta { display: inline-block; background: #d4a017; color: #000; font-weight: 700; padding: 16px 38px; border-radius: 6px; font-size: 1.05rem; transition: background 0.2s, transform 0.2s; }
+        .btn-cta:hover { background: #f0c040; color: #000; transform: translateY(-2px); }
+
+        /* Articles Grid */
+        .section-title { text-align: center; font-size: 2rem; color: #fff; margin-bottom: 40px; }
+        .articles { padding: 80px 40px; max-width: 1200px; margin: 0 auto; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 30px; }
+        .card { background: #161616; border: 1px solid #222; border-radius: 10px; padding: 32px 28px; transition: border-color 0.2s, transform 0.2s; }
+        .card:hover { border-color: #d4a017; transform: translateY(-4px); }
+        .card h3 { font-size: 1.2rem; color: #fff; margin-bottom: 12px; }
+        .card h3 a { color: #fff; }
+        .card h3 a:hover { color: #d4a017; }
+        .card p { color: #999; font-size: 0.95rem; margin-bottom: 18px; }
+        .card .read-more { color: #d4a017; font-weight: 600; font-size: 0.9rem; }
+
+        /* CTA Banner */
+        .cta-banner { background: linear-gradient(135deg, #1a1400 0%, #111 100%); border-top: 2px solid #d4a017; border-bottom: 2px solid #d4a017; padding: 70px 40px; text-align: center; }
+        .cta-banner h2 { font-size: 2rem; color: #fff; margin-bottom: 18px; }
+        .cta-banner p { color: #bbb; font-size: 1.1rem; max-width: 750px; margin: 0 auto 32px; }
+
+        /* Footer */
+        footer { background: #111; text-align: center; padding: 30px 20px; color: #666; font-size: 0.9rem; border-top: 1px solid #222; }
+        footer a { color: #d4a017; }
+
+        @media (max-width: 600px) {
+            nav { padding: 14px 20px; flex-direction: column; gap: 10px; }
+            .hero h1 { font-size: 2rem; }
+            .hero { padding: 60px 16px 50px; }
+            .articles { padding: 50px 16px; }
+            .grid { grid-template-columns: 1fr; }
+            .cta-banner { padding: 50px 16px; }
+            .cta-banner h2 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Hollywood<span>Society</span></div>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="#articles">Articles</a>
+        <a href="https://www.octanemultimedia.com/submit-a-film/">Submit a Film</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Inside the <span>Entertainment Industry</span></h1>
+    <p>Industry insights, distribution knowledge, and career resources for film professionals.</p>
+    <a href="https://www.octanemultimedia.com/submit-a-film/" class="btn-cta">Submit Your Film</a>
+</section>
+
+<section class="articles" id="articles">
+    <h2 class="section-title">Latest Articles</h2>
+    <div class="grid">
+
+        <div class="card">
+            <h3><a href="/blog/avod-vs-svod-vs-tvod-explained.html">AVOD vs SVOD vs TVOD Explained: Which Model Is Best for Your Film?</a></h3>
+            <p>What do these streaming models mean for filmmakers? Learn how each revenue model works, which platforms use them, and how to choose the right strategy for your film's distribution.</p>
+            <a href="/blog/avod-vs-svod-vs-tvod-explained.html" class="read-more">Read Article &rarr;</a>
+        </div>
+
+        <div class="card">
+            <h3><a href="/blog/film-distribution-deal-terms-explained.html">Film Distribution Deal Terms Explained: What Every Filmmaker Should Know</a></h3>
+            <p>This guide breaks down the key contract elements every filmmaker needs to understand, from revenue splits and rights windows to minimum guarantees and expense caps.</p>
+            <a href="/blog/film-distribution-deal-terms-explained.html" class="read-more">Read Article &rarr;</a>
+        </div>
+
+        <div class="card">
+            <h3><a href="/blog/foreign-film-sales-explained.html">Foreign Film Sales Explained: How International Distribution Grows Your Revenue</a></h3>
+            <p>Foreign film sales can significantly boost your indie film's revenue. Learn how international distribution works, what buyers look for, and how to position your film for global markets.</p>
+            <a href="/blog/foreign-film-sales-explained.html" class="read-more">Read Article &rarr;</a>
+        </div>
+
+        <div class="card">
+            <h3><a href="/blog/film-aggregators-vs-distributors.html">Film Aggregators vs Distributors: What's the Difference?</a></h3>
+            <p>Film aggregators vs distributors -- what's the difference? Learn how each model works, what services they provide, and which option gives your independent film the best chance.</p>
+            <a href="/blog/film-aggregators-vs-distributors.html" class="read-more">Read Article &rarr;</a>
+        </div>
+
+        <div class="card">
+            <h3><a href="/blog/self-distribution-vs-traditional-distribution.html">Self-Distribution vs Traditional Distribution: Which Path Is Right?</a></h3>
+            <p>Compare the pros, cons, and realities of self-distribution versus traditional distribution to make the right choice for your independent film.</p>
+            <a href="/blog/self-distribution-vs-traditional-distribution.html" class="read-more">Read Article &rarr;</a>
+        </div>
+
+        <div class="card">
+            <h3><a href="/blog/how-long-does-film-distribution-take.html">How Long Does Film Distribution Take?</a></h3>
+            <p>Wondering how long film distribution takes from finished film to audience screens? Learn the typical timeline, what affects the process, and how to avoid delays.</p>
+            <a href="/blog/how-long-does-film-distribution-take.html" class="read-more">Read Article &rarr;</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="cta-banner">
+    <h2>Ready to Distribute Your Film?</h2>
+    <p>Octane Multimedia places indie films on Netflix, Hulu, Disney Channel, DirecTV, Redbox, and 100+ platforms worldwide.</p>
+    <a href="https://www.octanemultimedia.com/submit-a-film/" class="btn-cta">Submit Your Film</a>
+</section>
+
+<footer>
+    <p>&copy; 2026 HollywoodSociety.com | Powered by <a href="https://www.octanemultimedia.com/" target="_blank">Octane Multimedia</a></p>
+</footer>
+
+</body>
+</html>
