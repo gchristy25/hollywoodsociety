@@ -3,64 +3,561 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HollywoodSociety - Inside the Entertainment Industry</title>
-    <meta name="description" content="Industry insights, distribution knowledge, and career resources for film professionals. HollywoodSociety is your authority source for entertainment industry news and education.">
-    <meta property="og:title" content="HollywoodSociety - Inside the Entertainment Industry">
-    <meta property="og:description" content="Industry insights, distribution knowledge, and career resources for film professionals.">
+    <title>HollywoodSociety - The Entertainment Industry's Inner Circle</title>
+    <meta name="description" content="Exclusive industry insights, distribution intelligence, and insider access for serious filmmakers. HollywoodSociety is the elite authority on entertainment industry strategy and film distribution.">
+    <meta property="og:title" content="HollywoodSociety - The Entertainment Industry's Inner Circle">
+    <meta property="og:description" content="Exclusive industry insights, distribution intelligence, and insider access for serious filmmakers.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hollywoodsociety.com/">
     <link rel="canonical" href="https://hollywoodsociety.com/">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.7; }
-        a { color: #d4a017; text-decoration: none; transition: color 0.2s; }
-        a:hover { color: #f0c040; }
 
-        /* Nav */
-        nav { background: #111; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid #d4a017; position: sticky; top: 0; z-index: 100; }
-        .logo { font-size: 1.5rem; font-weight: 700; color: #fff; letter-spacing: 0.5px; }
-        .logo span { color: #d4a017; }
-        .nav-links { display: flex; gap: 28px; }
-        .nav-links a { color: #ccc; font-size: 0.95rem; font-weight: 500; }
-        .nav-links a:hover { color: #d4a017; }
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #000;
+            color: #e0e0e0;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
 
-        /* Hero */
-        .hero { text-align: center; padding: 100px 20px 80px; background: linear-gradient(180deg, #111 0%, #0a0a0a 100%); }
-        .hero h1 { font-size: 3rem; color: #fff; margin-bottom: 18px; }
-        .hero h1 span { color: #d4a017; }
-        .hero p { font-size: 1.2rem; color: #aaa; max-width: 640px; margin: 0 auto 36px; }
-        .btn-cta { display: inline-block; background: #d4a017; color: #000; font-weight: 700; padding: 16px 38px; border-radius: 6px; font-size: 1.05rem; transition: background 0.2s, transform 0.2s; }
-        .btn-cta:hover { background: #f0c040; color: #000; transform: translateY(-2px); }
+        a { color: #c9a227; text-decoration: none; transition: color 0.3s, text-shadow 0.3s; }
+        a:hover { color: #f0d060; text-shadow: 0 0 12px rgba(201, 162, 39, 0.3); }
 
-        /* Articles Grid */
-        .section-title { text-align: center; font-size: 2rem; color: #fff; margin-bottom: 40px; }
-        .articles { padding: 80px 40px; max-width: 1200px; margin: 0 auto; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 30px; }
-        .card { background: #161616; border: 1px solid #222; border-radius: 10px; padding: 32px 28px; transition: border-color 0.2s, transform 0.2s; }
-        .card:hover { border-color: #d4a017; transform: translateY(-4px); }
-        .card h3 { font-size: 1.2rem; color: #fff; margin-bottom: 12px; }
+        /* === NAV === */
+        nav {
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 0 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 3px solid #c9a227;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            height: 80px;
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .logo span { color: #c9a227; }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a { color: #bbb; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; }
+        .nav-links a:hover { color: #c9a227; }
+        .nav-cta {
+            background: linear-gradient(135deg, #c9a227, #d4a017, #e6b422);
+            color: #000 !important;
+            font-weight: 800 !important;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-size: 0.85rem !important;
+            letter-spacing: 2px !important;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(201, 162, 39, 0.3);
+        }
+        .nav-cta:hover {
+            background: linear-gradient(135deg, #e6b422, #f0d060, #e6b422);
+            color: #000 !important;
+            text-shadow: none !important;
+            box-shadow: 0 6px 30px rgba(201, 162, 39, 0.5);
+            transform: translateY(-1px);
+        }
+
+        /* === HERO === */
+        .hero {
+            text-align: center;
+            padding: 140px 20px 120px;
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(201, 162, 39, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 20% 50%, rgba(201, 162, 39, 0.03) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 50%, rgba(201, 162, 39, 0.03) 0%, transparent 50%),
+                linear-gradient(180deg, #0a0800 0%, #000 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #c9a227, transparent);
+        }
+        .hero-badge {
+            display: inline-block;
+            border: 1px solid #c9a227;
+            color: #c9a227;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            padding: 10px 30px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .hero-badge::before, .hero-badge::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border: 1px solid #c9a227;
+        }
+        .hero-badge::before { top: -4px; left: -4px; border-right: none; border-bottom: none; }
+        .hero-badge::after { bottom: -4px; right: -4px; border-left: none; border-top: none; }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 24px;
+            line-height: 1.1;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero h1 .gold {
+            color: #c9a227;
+            display: block;
+            text-shadow: 0 0 40px rgba(201, 162, 39, 0.3);
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: #888;
+            max-width: 620px;
+            margin: 0 auto 50px;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+        .hero-ctas { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, #c9a227, #d4a017, #e6b422);
+            color: #000;
+            font-weight: 800;
+            padding: 20px 50px;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            box-shadow: 0 8px 30px rgba(201, 162, 39, 0.3);
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #e6b422, #f0d060, #e6b422);
+            color: #000;
+            text-shadow: none;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(201, 162, 39, 0.5);
+        }
+        .btn-outline {
+            display: inline-block;
+            border: 2px solid #c9a227;
+            color: #c9a227;
+            font-weight: 700;
+            padding: 18px 48px;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+        .btn-outline:hover {
+            background: rgba(201, 162, 39, 0.1);
+            color: #f0d060;
+            border-color: #f0d060;
+            text-shadow: 0 0 12px rgba(201, 162, 39, 0.3);
+            transform: translateY(-3px);
+        }
+
+        /* === STATS BAR === */
+        .stats-bar {
+            background: #0a0a08;
+            border-top: 1px solid rgba(201, 162, 39, 0.2);
+            border-bottom: 1px solid rgba(201, 162, 39, 0.2);
+            padding: 50px 40px;
+        }
+        .stats-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+        .stat-item .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: #c9a227;
+            display: block;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .stat-item .stat-label {
+            font-size: 0.8rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        /* === DIVIDER === */
+        .gold-divider {
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+        }
+        .gold-divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #c9a227, transparent);
+        }
+        .gold-divider .diamond {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #c9a227;
+            transform: rotate(45deg);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* === CTA SECTION 1 === */
+        .cta-section {
+            padding: 100px 40px;
+            text-align: center;
+            background:
+                radial-gradient(ellipse at 50% 50%, rgba(201, 162, 39, 0.06) 0%, transparent 70%),
+                #000;
+            position: relative;
+        }
+        .cta-section::before, .cta-section::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(201, 162, 39, 0.5), transparent);
+        }
+        .cta-section::before { top: 0; }
+        .cta-section::after { bottom: 0; }
+        .cta-section .cta-eyebrow {
+            font-size: 0.75rem;
+            color: #c9a227;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+        .cta-section h2 .gold { color: #c9a227; }
+        .cta-section p {
+            color: #777;
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto 45px;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        /* === ARTICLES === */
+        .articles {
+            padding: 100px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .section-header .eyebrow {
+            font-size: 0.75rem;
+            color: #c9a227;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #fff;
+            font-weight: 900;
+        }
+        .section-header h2 .gold { color: #c9a227; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: linear-gradient(145deg, #0d0d0a, #111110);
+            border: 1px solid rgba(201, 162, 39, 0.15);
+            border-radius: 2px;
+            padding: 40px 32px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #c9a227, transparent);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .card:hover {
+            border-color: rgba(201, 162, 39, 0.4);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(201, 162, 39, 0.05);
+        }
+        .card:hover::before { opacity: 1; }
+        .card .card-tag {
+            display: inline-block;
+            font-size: 0.65rem;
+            color: #c9a227;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            border: 1px solid rgba(201, 162, 39, 0.3);
+            padding: 4px 12px;
+        }
+        .card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 14px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
         .card h3 a { color: #fff; }
-        .card h3 a:hover { color: #d4a017; }
-        .card p { color: #999; font-size: 0.95rem; margin-bottom: 18px; }
-        .card .read-more { color: #d4a017; font-weight: 600; font-size: 0.9rem; }
+        .card h3 a:hover { color: #c9a227; text-shadow: none; }
+        .card p {
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+        .card .read-more {
+            color: #c9a227;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+        }
+        .card .read-more:hover { color: #f0d060; letter-spacing: 3px; }
 
-        /* CTA Banner */
-        .cta-banner { background: linear-gradient(135deg, #1a1400 0%, #111 100%); border-top: 2px solid #d4a017; border-bottom: 2px solid #d4a017; padding: 70px 40px; text-align: center; }
-        .cta-banner h2 { font-size: 2rem; color: #fff; margin-bottom: 18px; }
-        .cta-banner p { color: #bbb; font-size: 1.1rem; max-width: 750px; margin: 0 auto 32px; }
+        /* === VIP CTA BANNER === */
+        .vip-banner {
+            background:
+                linear-gradient(135deg, rgba(201, 162, 39, 0.08) 0%, rgba(0,0,0,0.95) 50%, rgba(201, 162, 39, 0.08) 100%),
+                #050500;
+            border-top: 3px solid #c9a227;
+            border-bottom: 3px solid #c9a227;
+            padding: 100px 40px;
+            text-align: center;
+            position: relative;
+        }
+        .vip-banner::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            border: 1px solid rgba(201, 162, 39, 0.3);
+            transform: translateX(-50%) rotate(45deg);
+        }
+        .vip-banner .vip-eyebrow {
+            font-size: 0.75rem;
+            color: #c9a227;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        .vip-banner h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+        .vip-banner h2 .gold { color: #c9a227; }
+        .vip-banner p {
+            color: #888;
+            font-size: 1.15rem;
+            max-width: 750px;
+            margin: 0 auto 24px;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+        .vip-banner .platforms {
+            color: #555;
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 45px;
+        }
 
-        /* Footer */
-        footer { background: #111; text-align: center; padding: 30px 20px; color: #666; font-size: 0.9rem; border-top: 1px solid #222; }
-        footer a { color: #d4a017; }
+        /* === INSIDER SECTION === */
+        .insider-section {
+            padding: 100px 40px;
+            text-align: center;
+            background: #000;
+            position: relative;
+        }
+        .insider-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 60px;
+            background: linear-gradient(180deg, #c9a227, transparent);
+        }
+        .insider-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        .insider-item {
+            padding: 40px 24px;
+            border: 1px solid rgba(201, 162, 39, 0.15);
+            background: rgba(201, 162, 39, 0.02);
+            transition: all 0.3s;
+        }
+        .insider-item:hover {
+            border-color: rgba(201, 162, 39, 0.4);
+            background: rgba(201, 162, 39, 0.05);
+        }
+        .insider-item .insider-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            display: block;
+            color: #c9a227;
+        }
+        .insider-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .insider-item p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            font-weight: 300;
+        }
 
-        @media (max-width: 600px) {
-            nav { padding: 14px 20px; flex-direction: column; gap: 10px; }
-            .hero h1 { font-size: 2rem; }
-            .hero { padding: 60px 16px 50px; }
-            .articles { padding: 50px 16px; }
+        /* === FINAL CTA === */
+        .final-cta {
+            padding: 120px 40px;
+            text-align: center;
+            background:
+                radial-gradient(ellipse at 50% 50%, rgba(201, 162, 39, 0.1) 0%, transparent 60%),
+                #000;
+        }
+        .final-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: #fff;
+            margin-bottom: 24px;
+            font-weight: 900;
+            line-height: 1.2;
+        }
+        .final-cta h2 .gold { color: #c9a227; }
+        .final-cta p {
+            color: #777;
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto 50px;
+            font-weight: 300;
+        }
+
+        /* === FOOTER === */
+        footer {
+            background: #050500;
+            text-align: center;
+            padding: 40px 20px;
+            color: #444;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(201, 162, 39, 0.15);
+            letter-spacing: 1px;
+        }
+        footer a { color: #c9a227; }
+
+        /* === MOBILE === */
+        @media (max-width: 900px) {
+            .stats-inner { grid-template-columns: repeat(2, 1fr); }
+            .insider-grid { grid-template-columns: 1fr; max-width: 400px; }
+        }
+
+        @media (max-width: 700px) {
+            nav { padding: 0 20px; height: auto; flex-direction: column; gap: 12px; padding: 16px 20px; }
+            .nav-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
+            .logo { font-size: 1.4rem; }
+
+            .hero { padding: 80px 16px 70px; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.05rem; }
+            .hero-ctas { flex-direction: column; align-items: center; }
+            .btn-primary, .btn-outline { padding: 18px 36px; font-size: 0.95rem; width: 100%; max-width: 320px; text-align: center; }
+
+            .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .stat-item .stat-number { font-size: 2rem; }
+
+            .articles { padding: 60px 16px; }
             .grid { grid-template-columns: 1fr; }
-            .cta-banner { padding: 50px 16px; }
-            .cta-banner h2 { font-size: 1.5rem; }
+            .section-header h2 { font-size: 2rem; }
+
+            .cta-section { padding: 70px 16px; }
+            .cta-section h2 { font-size: 2rem; }
+
+            .vip-banner { padding: 70px 16px; }
+            .vip-banner h2 { font-size: 2rem; }
+
+            .insider-section { padding: 70px 16px; }
+
+            .final-cta { padding: 80px 16px; }
+            .final-cta h2 { font-size: 2.2rem; }
         }
     </style>
 </head>
@@ -70,52 +567,95 @@
     <div class="logo">Hollywood<span>Society</span></div>
     <div class="nav-links">
         <a href="/">Home</a>
-        <a href="#articles">Articles</a>
-        <a href="https://www.octanemultimedia.com/submit-a-film/">Submit a Film</a>
+        <a href="#insider-knowledge">Articles</a>
+        <a href="https://www.octanemultimedia.com/submit-a-film/" class="nav-cta">Submit Your Film</a>
     </div>
 </nav>
 
 <section class="hero">
-    <h1>Inside the <span>Entertainment Industry</span></h1>
-    <p>Industry insights, distribution knowledge, and career resources for film professionals.</p>
-    <a href="https://www.octanemultimedia.com/submit-a-film/" class="btn-cta">Submit Your Film</a>
+    <div class="hero-badge">Members Only</div>
+    <h1>Enter the Entertainment Industry's <span class="gold">Inner Circle</span></h1>
+    <p>Exclusive distribution intelligence, insider strategies, and direct access to the platforms that launch careers. This is where serious filmmakers come to play.</p>
+    <div class="hero-ctas">
+        <a href="https://www.octanemultimedia.com/submit-a-film/" class="btn-primary">Submit Your Film</a>
+        <a href="#insider-knowledge" class="btn-outline">Get Insider Access</a>
+    </div>
 </section>
 
-<section class="articles" id="articles">
-    <h2 class="section-title">Latest Articles</h2>
+<div class="stats-bar">
+    <div class="stats-inner">
+        <div class="stat-item">
+            <span class="stat-number">100+</span>
+            <span class="stat-label">Distribution Platforms</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">Global</span>
+            <span class="stat-label">Market Reach</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">Elite</span>
+            <span class="stat-label">Industry Network</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Platform Access</span>
+        </div>
+    </div>
+</div>
+
+<section class="cta-section">
+    <div class="cta-eyebrow">Exclusive Opportunity</div>
+    <h2>Your Film Deserves a <span class="gold">Global Stage</span></h2>
+    <p>Netflix, Hulu, Disney Channel, DirecTV, Redbox, and over 100 platforms worldwide are waiting. The only question is whether you're ready to take the next step.</p>
+    <a href="https://www.octanemultimedia.com/submit-a-film/" class="btn-primary">Join the Industry</a>
+</section>
+
+<div class="gold-divider"><span class="diamond"></span></div>
+
+<section class="articles" id="insider-knowledge">
+    <div class="section-header">
+        <div class="eyebrow">Insider Knowledge</div>
+        <h2>Industry <span class="gold">Intelligence</span></h2>
+    </div>
     <div class="grid">
 
         <div class="card">
+            <span class="card-tag">Revenue Models</span>
             <h3><a href="/blog/avod-vs-svod-vs-tvod-explained.html">AVOD vs SVOD vs TVOD Explained: Which Model Is Best for Your Film?</a></h3>
             <p>What do these streaming models mean for filmmakers? Learn how each revenue model works, which platforms use them, and how to choose the right strategy for your film's distribution.</p>
             <a href="/blog/avod-vs-svod-vs-tvod-explained.html" class="read-more">Read Article &rarr;</a>
         </div>
 
         <div class="card">
+            <span class="card-tag">Deal Terms</span>
             <h3><a href="/blog/film-distribution-deal-terms-explained.html">Film Distribution Deal Terms Explained: What Every Filmmaker Should Know</a></h3>
             <p>This guide breaks down the key contract elements every filmmaker needs to understand, from revenue splits and rights windows to minimum guarantees and expense caps.</p>
             <a href="/blog/film-distribution-deal-terms-explained.html" class="read-more">Read Article &rarr;</a>
         </div>
 
         <div class="card">
+            <span class="card-tag">International Sales</span>
             <h3><a href="/blog/foreign-film-sales-explained.html">Foreign Film Sales Explained: How International Distribution Grows Your Revenue</a></h3>
             <p>Foreign film sales can significantly boost your indie film's revenue. Learn how international distribution works, what buyers look for, and how to position your film for global markets.</p>
             <a href="/blog/foreign-film-sales-explained.html" class="read-more">Read Article &rarr;</a>
         </div>
 
         <div class="card">
+            <span class="card-tag">Distribution Strategy</span>
             <h3><a href="/blog/film-aggregators-vs-distributors.html">Film Aggregators vs Distributors: What's the Difference?</a></h3>
             <p>Film aggregators vs distributors -- what's the difference? Learn how each model works, what services they provide, and which option gives your independent film the best chance.</p>
             <a href="/blog/film-aggregators-vs-distributors.html" class="read-more">Read Article &rarr;</a>
         </div>
 
         <div class="card">
+            <span class="card-tag">Self vs Traditional</span>
             <h3><a href="/blog/self-distribution-vs-traditional-distribution.html">Self-Distribution vs Traditional Distribution: Which Path Is Right?</a></h3>
             <p>Compare the pros, cons, and realities of self-distribution versus traditional distribution to make the right choice for your independent film.</p>
             <a href="/blog/self-distribution-vs-traditional-distribution.html" class="read-more">Read Article &rarr;</a>
         </div>
 
         <div class="card">
+            <span class="card-tag">Timelines</span>
             <h3><a href="/blog/how-long-does-film-distribution-take.html">How Long Does Film Distribution Take?</a></h3>
             <p>Wondering how long film distribution takes from finished film to audience screens? Learn the typical timeline, what affects the process, and how to avoid delays.</p>
             <a href="/blog/how-long-does-film-distribution-take.html" class="read-more">Read Article &rarr;</a>
@@ -124,10 +664,43 @@
     </div>
 </section>
 
-<section class="cta-banner">
-    <h2>Ready to Distribute Your Film?</h2>
-    <p>Octane Multimedia places indie films on Netflix, Hulu, Disney Channel, DirecTV, Redbox, and 100+ platforms worldwide.</p>
-    <a href="https://www.octanemultimedia.com/submit-a-film/" class="btn-cta">Submit Your Film</a>
+<section class="vip-banner">
+    <div class="vip-eyebrow">VIP Access</div>
+    <h2>Ready to <span class="gold">Launch Your Film</span> Worldwide?</h2>
+    <p>Octane Multimedia places independent films on the world's most prestigious streaming platforms and distribution networks.</p>
+    <div class="platforms">Netflix &bull; Hulu &bull; Disney Channel &bull; DirecTV &bull; Redbox &bull; 100+ More</div>
+    <a href="https://www.octanemultimedia.com/submit-a-film/" class="btn-primary">Submit Your Film</a>
+</section>
+
+<section class="insider-section">
+    <div class="section-header">
+        <div class="eyebrow">Why Hollywood Society</div>
+        <h2>The <span class="gold">Elite Advantage</span></h2>
+    </div>
+    <div class="insider-grid">
+        <div class="insider-item">
+            <span class="insider-icon">&#9733;</span>
+            <h3>Distribution Intelligence</h3>
+            <p>Deep-dive articles on deal terms, revenue models, and market strategy that most filmmakers never see.</p>
+        </div>
+        <div class="insider-item">
+            <span class="insider-icon">&#9830;</span>
+            <h3>Global Platform Access</h3>
+            <p>Direct pathways to 100+ streaming platforms, from major networks to international markets.</p>
+        </div>
+        <div class="insider-item">
+            <span class="insider-icon">&#9827;</span>
+            <h3>Industry Authority</h3>
+            <p>Trusted by filmmakers worldwide as the premier source for distribution knowledge and career strategy.</p>
+        </div>
+    </div>
+    <a href="https://www.octanemultimedia.com/submit-a-film/" class="btn-outline">Get Insider Access</a>
+</section>
+
+<section class="final-cta">
+    <h2>Stop Waiting.<br><span class="gold">Start Distributing.</span></h2>
+    <p>The industry doesn't wait for anyone. Take the first step toward getting your film seen by audiences worldwide.</p>
+    <a href="https://www.octanemultimedia.com/submit-a-film/" class="btn-primary">Join the Industry</a>
 </section>
 
 <footer>
